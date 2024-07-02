@@ -36,7 +36,11 @@ export const Navbar = () => {
                             <div className={`z-10 fixed ${dropdown == true ? '': 'hidden'} bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}>
                                 <ul className="py-2 text-sm text-gray-700">
                                     <li>
-                                        <a onClick={() => signOut()} 
+                                        <a onClick={() => {
+                                                signOut({
+                                                    callbackUrl: "/",
+                                                })
+                                            }} 
                                             className="cursor-pointer block px-4 py-2 hover:bg-gray-100">Logout</a>
                                     </li>
                                 </ul>
